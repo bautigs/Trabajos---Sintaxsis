@@ -1,21 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+
 // Bautista González Seijas 
 int main(void)
 {
    int c;
    while (EOF!= (c = getchar()))
    {
-    if (c >= 65 && c<=90 )
+    if (isupper (c) )
     {
-        printf("%c",c + 32);
+        printf("%c",tolower(c));
     }
-    else if (c >= 97 && c<=122)
+    else if (islower (c))
     {
-        printf("%c",c-32);
+        printf("%c",toupper(c));
     }
-    else if (c >= 48 && c<=57)
+    else if (isdigit(c))
     {
         
     }
